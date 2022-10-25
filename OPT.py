@@ -105,7 +105,7 @@ def attack(x, command, save):
         if res[0] == command.upper():
             print('SUCCESSFUL!!!!!')
             flag = 1
-            torchaudio.save('./generated/white/opt/' + save + '.wav', adv_images.detach().cpu().reshape(1, -1), 16000)
+            torchaudio.save(save + '.wav', adv_images.detach().cpu().reshape(1, -1), 16000)
             break
         # torchaudio.save('./test_' + save + '.wav', adv_images.detach().cpu().reshape(1, -1), 16000)
 
@@ -123,7 +123,7 @@ def attack(x, command, save):
             print(prev_cost)
 
     if flag == 0:
-        torchaudio.save('./generated/white/opt/' + save + '_failed.wav', adv_images.detach().cpu().reshape(1, -1), 16000)
+        torchaudio.save(save + '_failed.wav', adv_images.detach().cpu().reshape(1, -1), 16000)
 
 def attckAndSave(source, command, save):
     print("Hi I'm there!")
@@ -150,6 +150,7 @@ if __name__ == '__main__':
     print(args.command)
     print(args.save)
     attckAndSave(source=args.source, command=args.command, save=args.save)
+    
     '''
     files = os.listdir(base)
     for file in files:
