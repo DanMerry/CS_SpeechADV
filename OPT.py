@@ -142,7 +142,7 @@ if __name__ == '__main__':
     model = Wav2Vec2ForCTC.from_pretrained(r'yongjian/wav2vec2-large-a')
 
     parser = argparse.ArgumentParser(description='OPT Adversarial Examples')
-    parser.add_argument('--source', dest='source', type=str, help='Addreess of the source file', default=r'D:\ZWJ\TrustWorthy\data\music\01.wav')
+    parser.add_argument('--source', dest='source', type=str, help='Addreess of the source file', default=r'./music/01.wav')
     parser.add_argument('--command', dest='command', type=str, help='Your attack target command', default='DanMerry')
     parser.add_argument('--save', dest='save', type=str, help='Addreess of the saved file', default='./generated/test_adv.wav')
     args = parser.parse_args()
