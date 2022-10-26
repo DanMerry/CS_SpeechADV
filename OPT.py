@@ -133,11 +133,7 @@ def attckAndSave(source, command, save):
     attack(y_torch, command, save)
 
 if __name__ == '__main__':
-    base = r'D:\ZWJ\TrustWorthy\data\music'
-    text = ['Text my client hello', 'Show me the payment code', 'Your lock is broken',
-            'Remind me to call Bill', 'Turn off all alarms', 'Turn on automatic renewal',
-            'Clear the voice mail',  'Screen capture', 'Your flight has been canceled',
-            'Navigate to Golden Gate Bridge']
+    
     processor = Wav2Vec2Processor.from_pretrained(r'yongjian/wav2vec2-large-a')
     model = Wav2Vec2ForCTC.from_pretrained(r'yongjian/wav2vec2-large-a')
 
