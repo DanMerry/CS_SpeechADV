@@ -149,7 +149,7 @@ if __name__ == '__main__':
     print(args.source)
     print(args.command)
     print(args.save)
-    attckAndSave(source=args.source, command=args.command, save=args.save)
+    attckAndSave(source=args.source, command=args.command.replace('_', ' '), save=args.save)
     
     '''
     files = os.listdir(base)
